@@ -3,15 +3,18 @@ class Banner
 {
     private $string;
 
-    public function __construct(string $string) {
+    public function __construct(string $string)
+    {
         $this->string = $string;
     }
 
-    public function showWithParen() {
+    public function showWithParen()
+    {
         echo "(" . $this->string . ")" . PHP_EOL;
     }
 
-    public function showWithAster() {
+    public function showWithAster()
+    {
         echo "*" . $this->string . "*" . PHP_EOL;
     }
 }
@@ -22,11 +25,14 @@ interface PrintInterface
     public function printStrong();
 }
 
-class PrintBanner extends Banner implements PrintInterface {
-    public function printWeak() {
+class PrintBanner extends Banner implements PrintInterface
+{
+    public function printWeak()
+    {
         $this->showWithParen();
     }
-    public function printStrong() {
+    public function printStrong()
+    {
         $this->showWithAster();
     }
 }

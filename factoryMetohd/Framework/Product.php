@@ -1,6 +1,7 @@
 <?php
 namespace Framework;
 
-abstract class Product {
-    public abstract function use();
+abstract class Product
+{
+    abstract public function use();
 }
