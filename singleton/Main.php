@@ -1,5 +1,5 @@
 <?php
-require('./Singleton.php');
+require "Singleton.php";
 
 $obj1 = Singleton::getInstance();
 $obj2 = Singleton::getInstance();
