@@ -1,9 +1,9 @@
 <?php
 require_once "vendor/autoload.php";
-use Framework\Manager;
-
 require "MessageBox.php";
 require "UnderlinePen.php";
+
+use Framework\Manager;
 
 $manager = new Manager();
 $upen = new UnderlinePen('~');

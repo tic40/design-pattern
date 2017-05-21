@@ -1,8 +1,7 @@
 <?php
 namespace Framework;
 
-require_once "vendor/autoload.php";
-use \Framework\Product;
+use Framework\Product;
 
 abstract class Factory
 {

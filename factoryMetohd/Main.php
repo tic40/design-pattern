@@ -1,5 +1,6 @@
 <?php
 require_once "vendor/autoload.php";
+
 use IDCard\IDCardFactory;
 
 $factory = new IDCardFactory();

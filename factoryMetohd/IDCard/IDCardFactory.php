@@ -1,7 +1,6 @@
 <?php
 namespace IDCard;
 
-require_once "vendor/autoload.php";
 use Framework\Factory;
 use Framework\Product;
 use IDCard\IDCard;

@@ -1,8 +1,6 @@
 <?php
 namespace Framework;
 
-require_once "vendor/autoload.php";
-
 class Manager
 {
     private $showcase = [];

@@ -1,8 +1,7 @@
 <?php
 namespace IDCard;
 
-require_once "vendor/autoload.php";
-use \Framework\Product;
+use Framework\Product;
 
 class IDCard extends Product
 {

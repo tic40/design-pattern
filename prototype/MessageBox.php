@@ -1,5 +1,4 @@
 <?php
-require_once "vendor/autoload.php";
 use Framework\Product;
 
 class MessageBox implements Product
