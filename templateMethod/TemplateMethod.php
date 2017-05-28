@@ -1,5 +1,4 @@
 <?php
-
 abstract class AbstractDisplay
 {
     abstract public function open();

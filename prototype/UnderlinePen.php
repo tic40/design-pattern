@@ -26,7 +26,7 @@ class UnderlinePen implements Product
         try {
             $p = clone $this;
         } catch (Exception $e) {
-            $e->getTrace();
+            echo $e->getMessage();
         }
         return $p;
     }

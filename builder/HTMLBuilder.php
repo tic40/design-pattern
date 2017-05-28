@@ -11,7 +11,7 @@ class HTMLBuilder extends Builder
         try {
             $this->writer = fopen($this->filename, 'w');
         } catch (Exception $e) {
-            $e->getTrace();
+            echo $e->getMessage();
         }
 
         $this->write("<html><head><title>" . $title . "</title></head><body>");
