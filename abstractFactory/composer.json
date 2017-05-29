@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Factory\\" : "Factory/",
+            "ListFactory\\"      : "ListFactory/",
+            "TableFactory\\"      : "TableFactory/"
+        }
+    }
+}
