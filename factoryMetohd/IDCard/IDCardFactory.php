@@ -3,7 +3,6 @@ namespace IDCard;
 
 use Framework\Factory;
 use Framework\Product;
-use IDCard\IDCard;
 
 class IDCardFactory extends Factory
 {

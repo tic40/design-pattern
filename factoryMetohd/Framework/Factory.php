@@ -1,8 +1,6 @@
 <?php
 namespace Framework;
 
-use Framework\Product;
-
 abstract class Factory
 {
     final public function create(string $owner): Product
