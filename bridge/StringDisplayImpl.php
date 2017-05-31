@@ -1,6 +1,6 @@
 <?php
 
-class stringDisplayImpl extends DisplayImpl
+class StringDisplayImpl extends DisplayImpl
 {
     private $string;
     private $width;
