@@ -1,7 +1,7 @@
 <?php
-require "Entry.php";
-require "File.php";
-require "MyDirectory.php";
+require_once __DIR__ . "/Entry.php";
+require_once __DIR__ . "/File.php";
+require_once __DIR__ . "/MyDirectory.php";
 
 try {
     echo "Making root entries..." . PHP_EOL;

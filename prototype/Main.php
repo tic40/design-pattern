@@ -1,7 +1,7 @@
 <?php
-require "vendor/autoload.php";
-require "MessageBox.php";
-require "UnderlinePen.php";
+require_once __DIR__ . "/vendor/autoload.php";
+require_once __DIR__ . "/MessageBox.php";
+require_once __DIR__ . "/UnderlinePen.php";
 
 use Framework\Manager;
 

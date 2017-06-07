@@ -1,5 +1,5 @@
 <?php
-require "Iterator.php";
+require_once __DIR__ . "/Iterator.php";
 
 $bookShelf = new BookShelf();
 $bookShelf->appendBook(new Book("Around the World in 80 Days"));

@@ -1,8 +1,8 @@
 <?php
-require "Director.php";
-require "Builder.php";
-require "TextBuilder.php";
-require "HTMLBuilder.php";
+require_once __DIR__ . "/Director.php";
+require_once __DIR__ . "/Builder.php";
+require_once __DIR__ . "/TextBuilder.php";
+require_once __DIR__ . "/HTMLBuilder.php";
 
 echo "1:plain, 2:html :";
 $input = intval(trim(fgets(STDIN)));

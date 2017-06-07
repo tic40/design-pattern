@@ -1,5 +1,5 @@
 <?php
-require "Singleton.php";
+require_once __DIR__ . "/Singleton.php";
 
 $obj1 = Singleton::getInstance();
 $obj2 = Singleton::getInstance();

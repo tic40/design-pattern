@@ -1,10 +1,11 @@
 <?php
-require "Hand.php";
-require "Player.php";
-require "Strategy.php";
-require "ProbStrategy.php";
-require "WinningStrategy.php";
+require __DIR__ . "/Hand.php";
+require __DIR__ . "/Player.php";
+require __DIR__ . "/Strategy.php";
+require __DIR__ . "/ProbStrategy.php";
+require __DIR__ . "/WinningStrategy.php";
 
+echo "input seed1 and seed2: ";
 $input = explode(" ", trim(fgets(STDIN)));
 
 if (count($input) !== 2) {

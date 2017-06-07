@@ -1,8 +1,8 @@
 <?php
-require "Display.php";
-require "DisplayImpl.php";
-require "CountDisplay.php";
-require "StringDisplayImpl.php";
+require_once __DIR__ . "/Display.php";
+require_once __DIR__ . "/DisplayImpl.php";
+require_once __DIR__ . "/CountDisplay.php";
+require_once __DIR__ . "/StringDisplayImpl.php";
 
 $d1 = new Display(new StringDisplayImpl("Hello, Japan."));
 $d2 = new CountDisplay(new StringDisplayImpl("Hello, World."));
