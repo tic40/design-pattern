@@ -8,15 +8,12 @@ require_once __DIR__ . "/SideBorder.php";
 $b1 = new StringDisplay("Hello, world.");
 $b2 = new SideBorder($b1, '#');
 $b3 = new FullBorder($b2);
-$b1->show();
-$b2->show();
-$b3->show();
 $b4 = new SideBorder(
     new FullBorder(
         new FullBorder(
             new SideBorder(
                 new FullBorder(
-                    new StringDisplay("こんにちは。")
+                    new StringDisplay("Hello, world!")
                 ),
                '*'
             )
@@ -24,4 +21,8 @@ $b4 = new SideBorder(
     ),
     '/'
 );
+
+$b1->show();
+$b2->show();
+$b3->show();
 $b4->show();
