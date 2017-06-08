@@ -2,7 +2,7 @@
 
 abstract class Visitor
 {
-    public function visit($object)
+    public function visit(Entry $object)
     {
         if ($object instanceof File) {
             $this->visitFile($object);
