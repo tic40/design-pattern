@@ -23,11 +23,11 @@ for ($i = 0; $i < 10000; $i++) {
     $nextHand1 = $player1->nextHand();
     $nextHand2 = $player2->nextHand();
     if ($nextHand1->isStrongerThan($nextHand2)) {
-        echo "Winner:" . $player1->toString() . PHP_EOL;
+        echo "Winner:" . $player1 . PHP_EOL;
         $player1->win();
         $player2->lose();
     } elseif ($nextHand2->isStrongerThan($nextHand1)) {
-        echo "Winner:" . $player2->toString() . PHP_EOL;
+        echo "Winner:" . $player2 . PHP_EOL;
         $player1->lose();
         $player2->win();
     } else {
@@ -37,5 +37,5 @@ for ($i = 0; $i < 10000; $i++) {
     }
 }
 echo "Total result:" . PHP_EOL;
-echo $player1->toString() . PHP_EOL;
-echo $player2->toString() . PHP_EOL;
+echo $player1 . PHP_EOL;
+echo $player2 . PHP_EOL;

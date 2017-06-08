@@ -38,7 +38,7 @@ class Player
         $this->gamecount++;
     }
 
-    public function toString(): string
+    public function __toString(): string
     {
         return "[" . $this->name . ":" . $this->gamecount . " games, " . $this->wincount . " win, " . $this->losecount . " lose" . "]";
     }

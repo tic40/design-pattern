@@ -20,6 +20,6 @@ class File extends Entry
     }
     protected function printListWithPrefix(string $prefix)
     {
-        echo $prefix . "/" . $this->toString() . PHP_EOL;
+        echo $prefix . "/" . $this . PHP_EOL;
     }
 }

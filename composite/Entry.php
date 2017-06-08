@@ -17,7 +17,7 @@ abstract class Entry
 
     abstract protected function printListWithPrefix(string $prefix);
 
-    public function toString(): string
+    public function __toString(): string
     {
         return $this->getName() . " (" . $this->getSize() . ")";
     }

@@ -6,12 +6,12 @@ class ListVisitor extends Visitor
 
     public function visitFile(File $file)
     {
-        echo $this->currentdir . "/" . $file->toString() . PHP_EOL;
+        echo $this->currentdir . "/" . $file . PHP_EOL;
     }
 
     public function visitDirectory(MyDirectory $directory)
     {
-        echo $this->currentdir . "/" . $directory->toString() . PHP_EOL;
+        echo $this->currentdir . "/" . $directory . PHP_EOL;
         $savedir = $this->currentdir;
         $this->currentdir = $this->currentdir . "/" . $directory->getName();
 

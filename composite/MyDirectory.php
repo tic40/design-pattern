@@ -32,7 +32,7 @@ class MyDirectory extends Entry
 
     protected function printListWithPrefix(string $prefix)
     {
-        echo $prefix . "/" . $this->toString() . PHP_EOL;
+        echo $prefix . "/" . $this . PHP_EOL;
         foreach ($this->directory as $v) {
             $v->printListWithPrefix($prefix . "/" . $this->name);
         }

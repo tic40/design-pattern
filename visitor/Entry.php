@@ -15,7 +15,7 @@ abstract class Entry implements Element
         throw new Exception();
     }
 
-    public function toString(): string
+    public function __toString(): string
     {
         return $this->getName() . " (" . $this->getSize() . ")";
     }
