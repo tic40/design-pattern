@@ -12,6 +12,6 @@ class LimitSupport extends Support
 
     protected function resolve(Trouble $trouble): bool
     {
-        return $trouble->getNumber() < $this->limit ? true : false;
+        return $trouble->getNumber() < $this->limit;
     }
 }

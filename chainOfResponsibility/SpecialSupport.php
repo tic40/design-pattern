@@ -12,6 +12,6 @@ class SpecialSupport extends Support
 
     protected function resolve(Trouble $trouble): bool
     {
-        return $trouble->getNumber() === $this->number ? true : false;
+        return $trouble->getNumber() === $this->number;
     }
 }

@@ -31,6 +31,7 @@ abstract class Support
     {
         return "[" . $this->name . "]";
     }
+
     abstract protected function resolve(Trouble $trouble): bool;
 
     protected function done(Trouble $trouble)
