@@ -5,9 +5,7 @@ class Gamer
 {
     private $money;
     private $fruits = [];
-    const FRUITS_NAME = [
-        "リンゴ", "ぶどう", "バナナ", "みかん",
-    ];
+    const FRUITS_NAME = ["リンゴ", "ぶどう", "バナナ", "みかん"];
 
     public function __construct(int $money)
     {
@@ -21,19 +19,22 @@ class Gamer
 
     public function bet()
     {
-        $dice = rand(1, 6);
-        if ($dice === 1) {
-            $this->money += 100;
-            echo "所持金が増えました。" . PHP_EOL;
-        } elseif ($dice === 2) {
-            $this->money /= 2;
-            echo "所持金が半分になりました。" . PHP_EOL;
-        } elseif ($dice === 6) {
-            $f = $this->getFruit();
-            echo "フルーツ(" . $f . ")をもらいました。" . PHP_EOL;
-            $this->fruits[] = $f;
-        } else {
-            echo "何も起こりませんでした。" . PHP_EOL;
+        switch (rand(1, 6)) {
+            case 1:
+                $this->money += 100;
+                echo "所持金が増えました。" . PHP_EOL;
+                break;
+            case 2:
+                $this->money /= 2;
+                echo "所持金が半分になりました。" . PHP_EOL;
+                break;
+            case 6:
+                $f = $this->getFruit();
+                echo "フルーツ(" . $f . ")をもらいました。" . PHP_EOL;
+                $this->fruits[] = $f;
+                break;
+            default:
+                echo "何も起こりませんでした。" . PHP_EOL;
         }
     }
 
@@ -61,10 +62,7 @@ class Gamer
 
     private function getFruit(): string
     {
-        $prefix = "";
-        if (boolval(rand(0, 1))) {
-            $prefix = "おいしい";
-        }
-        return $prefix . self::FRUITS_NAME[rand(0, count(self::FRUITS_NAME)-1)];
+        return boolval(rand(0, 1)) ? "おいしい" : ""
+            . self::FRUITS_NAME[rand(0, count(self::FRUITS_NAME)-1)];
     }
 }

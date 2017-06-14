@@ -4,12 +4,11 @@ namespace Game;
 class Memento
 {
     public $money;
-    public $fruits;
+    public $fruits = [];
 
     public function __construct(int $money)
     {
         $this->money = $money;
-        $this->fruits = [];
     }
 
     public function getMoney(): int
