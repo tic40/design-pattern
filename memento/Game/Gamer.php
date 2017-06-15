@@ -62,7 +62,7 @@ class Gamer
 
     private function getFruit(): string
     {
-        return boolval(rand(0, 1)) ? "おいしい" : ""
-            . self::FRUITS_NAME[rand(0, count(self::FRUITS_NAME)-1)];
+        $suffix = boolval(rand(0, 1)) ? "おいしい" : "";
+        return $suffix . self::FRUITS_NAME[rand(0, count(self::FRUITS_NAME)-1)];
     }
 }
