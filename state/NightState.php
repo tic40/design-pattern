@@ -35,7 +35,7 @@ class NightState implements State
 
     public function doPhone(Context $context)
     {
-        $context->recordLog("sound quality at nighttime");
+        $context->recordLog("record of the night call");
     }
 
     public function __toString(): string
