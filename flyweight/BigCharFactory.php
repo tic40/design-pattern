@@ -19,11 +19,9 @@ class BigCharFactory
 
     public function getBigChar(string $charname): BigChar
     {
-        $bc = $this->pool[$charname] ?? null;
-        if ($bc === null) {
-            $bc = new BigChar($charname);
-            $this->pool[$charname] = $bc;
+        if (isset($this->pool[$charname]) === false) {
+            $this->pool[$charname] = new BigChar($charname);
         }
-        return $bc;
+        return $this->pool[$charname];
     }
 }
