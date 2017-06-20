@@ -13,4 +13,9 @@ class FlipDownCommand implements Command
     {
         $this->theLight->turnOff();
     }
+
+    public function __toString(): string
+    {
+        return get_class($this);
+    }
 }

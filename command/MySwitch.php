@@ -9,4 +9,11 @@ class MySwitch
         $this->history[] = $cmd;
         $cmd->execute();
     }
+
+    public function displayHistory()
+    {
+        foreach($this->history as $k => $v) {
+            echo "{$k}: {$v}" . PHP_EOL;
+        }
+    }
 }

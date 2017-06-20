@@ -13,4 +13,9 @@ class FlipUpCommand implements Command
     {
         $this->theLight->turnOn();
     }
+
+    public function __toString() : string
+    {
+        return get_class($this);
+    }
 }
