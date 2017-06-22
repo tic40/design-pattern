@@ -9,13 +9,15 @@ class RepeatCommandNode extends Node
     public function parse(Context $context)
     {
         $context->skipToken("repeat");
-        $number = $context->currentNumber();
+        $this->number = $context->currentNumber();
         $context->nextToken();
-        $commandListNode = new CommandListNode();
-        $commandListNode->parse($context);
+        $this->commandListNode = new CommandListNode();
+        $this->commandListNode->parse($context);
     }
     public function __toString(): string
     {
-        return "[repeat {$this->number} {$this->commandListNode}]";
+        return $this->commandListNode
+            ? "[repeat {$this->number} {$this->commandListNode}]"
+            : "";
     }
 }

@@ -2,22 +2,21 @@
 
 class Context
 {
-    private $tokenizer;
+    private $token;
     private $currentToken;
 
     public function __construct(string $text)
     {
-        $this->tokenizer = strtok($text);
+        $this->token = preg_split("/[\s,]+/", $text);
         $this->nextToken();
     }
 
     public function nextToken(): string
     {
-        if ($this->tokenizer->hasMoreTokens()) {
-            $this->currentToken = $tokenizer->nextToken();
-        } else {
-            $this->currentToken = null;
-        }
+        $this->currentToken = ($this->currentToken === null)
+            ? current($this->token)
+            : next($this->token);
+
         return $this->currentToken;
     }
 
@@ -28,21 +27,14 @@ class Context
 
     public function skipToken(string $token)
     {
-        if (!$token->equals($this->currentToken)) {
-            throw new ParseException("Warning: " . $token . " is expected, but " . currentToken . " is found.");
+        if ($token !== $this->currentToken) {
+            throw new ParseException("Warning: {$token} is expected, but {$this->currentToken} is found.");
         }
         $this->nextToken();
     }
 
     public function currentNumber(): int
     {
-        $number = 0;
-        try {
-            $number = $this->currentToken;
-//Integer.parseInt(currentToken);
-        } catch (NumberFormatException $e) {
-            throw new ParseException("Warning: " + $e);
-        }
-        return $number;
+        return intval($this->currentToken);
     }
 }

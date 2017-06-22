@@ -13,6 +13,8 @@ class ProgramNode extends Node
     }
     public function __toString(): string
     {
-        return "[program {$this->commandListNode} ]";
+        return $this->commandListNode
+            ? "[program {$this->commandListNode}]"
+            : "";
     }
 }

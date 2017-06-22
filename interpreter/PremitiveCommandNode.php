@@ -9,15 +9,15 @@ class PrimitiveCommandNode extends Node
     {
         $this->name = $context->currentToken();
         $context->skipToken($this->name);
-        if (!$this->name->equals("go")
-            && !$this->name->equals("right")
-            && !$this->name->equals("left")) {
-            throw new ParseException($this->name + " is undefined");
+        if ($this->name !== "go"
+            && $this->name !== "right"
+            && $this->name !== "left") {
+            throw new ParseException("{$this->name} is undefined");
         }
     }
 
-    public function toString(): string
+    public function __toString(): string
     {
-        return $this->name;
+        return $this->name ?? "";
     }
 }

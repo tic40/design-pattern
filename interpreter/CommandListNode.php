@@ -10,7 +10,7 @@ class CommandListNode extends Node
         while (true) {
             if ($context->currentToken() == null) {
                 throw new ParseException("Missing 'end'");
-            } elseif ($context->currentToken()->equals("end")) {
+            } elseif ($context->currentToken() === "end") {
                 $context->skipToken("end");
                 break;
             } else {
@@ -23,7 +23,8 @@ class CommandListNode extends Node
 
     public function __toString(): string
     {
-        //return $list;
-        return join(" ", $list);
+        return $this->list
+            ? "[" . join(" ", $this->list) . "]"
+            : "[]";
     }
 }

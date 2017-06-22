@@ -7,17 +7,17 @@ class CommandNode extends Node
 
     public function parse(Context $context)
     {
-        if ($context->currentToken()->equals("repeat")) {
-            $node = new RepeatCommandNode();
-            $node->parse($context);
+        if ($context->currentToken() === "repeat") {
+            $this->node = new RepeatCommandNode();
+            $this->node->parse($context);
         } else {
-            $node = new PrimitiveCommandNode();
-            $node->parse($context);
+            $this->node = new PrimitiveCommandNode();
+            $this->node->parse($context);
         }
     }
 
     public function __toString(): string
     {
-        return $node->toString();
+        return $this->node ?? "";
     }
 }
