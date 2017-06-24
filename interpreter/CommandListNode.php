@@ -11,12 +11,10 @@ class CommandListNode extends Node
             if ($context->currentToken() === null) {
                 throw new ParseException("Missing 'end'");
             }
-
             if ($context->currentToken() === "end") {
                 $context->skipToken("end");
                 break;
             }
-
             $commandNode = new CommandNode();
             $commandNode->parse($context);
             $this->list[] = $commandNode;
